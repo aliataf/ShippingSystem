@@ -5,11 +5,14 @@
  */
 package shippingsystem;
 
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import shippingsystem.utils.BasicDB;
 
 /**
  *
@@ -20,7 +23,6 @@ public class ShippingSystem extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-
             FXMLLoader mainLoader = new FXMLLoader(getClass().getResource("/shippingsystem/auth/views/Login.fxml"));
             AnchorPane root = mainLoader.load();
 
@@ -29,11 +31,12 @@ public class ShippingSystem extends Application {
             primaryStage.setTitle("Hello World!");
             primaryStage.setScene(scene);
             primaryStage.show();
+
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
-
+    
     /**
      * @param args the command line arguments
      */
