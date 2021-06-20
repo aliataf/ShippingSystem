@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shippingsystem.auth.controllers.LoginController">
+   <children>
+      <Button defaultButton="true" layoutX="171.0" layoutY="269.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="269.0" text="Login">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ImageView fitHeight="246.0" fitWidth="253.0" layoutX="171.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/images/logo.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="259.0" layoutY="169.0" prefHeight="30.0" prefWidth="183.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="172.0" layoutY="169.0" prefHeight="24.0" prefWidth="85.0" text="Email">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="171.0" layoutY="209.0" prefHeight="24.0" prefWidth="85.0" text="Password">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="201.0" layoutY="341.0" prefHeight="24.0" prefWidth="143.0" text="Didn't registered yet?">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="signupBtn" layoutX="313.0" layoutY="341.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="63.0" style="-fx-background-color: transparent;" text="Signup" textFill="#1a0a94">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <PasswordField layoutX="259.0" layoutY="209.0" prefHeight="24.0" prefWidth="183.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+   </children>
+</AnchorPane>
