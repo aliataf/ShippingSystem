@@ -10,7 +10,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import shippingsystem.auth.presenters.LoginController;
+import shippingsystem.auth.controllers.LoginController;
 
 /**
  *
