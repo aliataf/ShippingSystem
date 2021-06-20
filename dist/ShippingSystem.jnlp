@@ -8,7 +8,8 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="ShippingSystem.jar" size="49552" download="eager" />
+    <jar href="ShippingSystem.jar" size="51587" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.25.jar" size="2428320" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="ShippingSystem" >
     <param name="requiredFXVersion" value="8.0+"/>

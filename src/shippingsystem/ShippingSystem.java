@@ -21,7 +21,7 @@ public class ShippingSystem extends Application {
     public void start(Stage primaryStage) {
         try {
 
-            FXMLLoader mainLoader = new FXMLLoader(getClass().getResource("auth/views/Login.fxml"));
+            FXMLLoader mainLoader = new FXMLLoader(getClass().getResource("/shippingsystem/auth/views/Login.fxml"));
             AnchorPane root = mainLoader.load();
 
             Scene scene = new Scene(root);

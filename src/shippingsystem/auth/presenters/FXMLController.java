@@ -3,33 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package shippingsystem.auth.controllers;
+package shippingsystem.auth.presenters;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import shippingsystem.utils.Utils;
 
 /**
  * FXML Controller class
  *
  * @author alilo
  */
-public class SignupController implements Initializable {
-
-    @FXML
-    private Button loginBtn;
+public class FXMLController implements Initializable {
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        loginBtn.setOnAction(event -> {
-            Utils.showScene(loginBtn, "/shippingsystem/auth/views/Login.fxml");
-        });
-    }
-
+        // TODO
+    }    
+    
 }

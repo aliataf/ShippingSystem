@@ -10,13 +10,13 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import shippingsystem.auth.controllers.LoginController;
+import shippingsystem.auth.presenters.LoginController;
 
 /**
  *
  * @author alilo
  */
-public class Utils {
+public class Helpers {
 
     public static void showScene(Node node, String url, String title) {
         try {
