@@ -46,8 +46,8 @@ public class LoginController implements Initializable {
             if (email.isEmpty() || password.isEmpty()) {
                 DialogUtil.getInstance().show(Alert.AlertType.ERROR, "Fields cannot be empty", "Error");
             } else {
-                UserDAO userModel = new UserDAO();
-                ArrayList<UserModel> users = userModel.getUsers();
+                UserDAO userDAO = new UserDAO();
+                ArrayList<UserModel> users = userDAO.getUsers();
                 boolean isExist = false;
                 for (UserModel um : users) {
                     if (um.getEmail().equals(email) && um.getPassword().equals(password)) {

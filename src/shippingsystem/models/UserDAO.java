@@ -12,21 +12,6 @@ import shippingsystem.utils.BasicDB;
  */
 public class UserDAO {
 
-    //data members
-    protected ArrayList<UserModel> data;
-
-    //Constructor
-    /**
-     * Creates a new instance of the BookDAO class.
-     */
-    public UserDAO() {
-        this.data = new ArrayList<>();
-    }
-
-    public ArrayList<UserModel> getData() {
-        return this.data;
-    }
-
     //Functionality
     /**
      * Sends a "Select * " query to the DBMS for retrieving books from a certain
@@ -36,8 +21,6 @@ public class UserDAO {
      * @return
      */
     public boolean retrieve(String category) {
-        //Clear the previous data
-        this.data.clear();
         //Build the SQL query
         String query = "select * from books where category = '" + category + "'";
         //Execute the query via the BasicDB methods
@@ -56,8 +39,6 @@ public class UserDAO {
                 temp.setCategory(result.getString(3));
                 temp.setNumOfCopies(result.getInt(4));
                 */
-                //Add the record to the list
-                this.data.add(temp);
             } while (result.next());
             return true;
         } catch (SQLException e) {
@@ -72,15 +53,11 @@ public class UserDAO {
      * @param book
      */
     public void add(UserModel user) {
-        // Clear the previous data
-        this.data.clear();
         // Form the query
         String query = "insert into users (email, password, name, phone, address) values( '"
-                + user.getEmail() + "','" + user.getPassword() + "'," + user.getName() + "'," + user.getPhone() + "'," + user.getAddress() + ")";
+                + user.getEmail() + "','" + user.getPassword() + "','" + user.getName() + "','" + user.getPhone() + "','" + user.getAddress() + "')";
         // Execute the query
         int rows = BasicDB.manipulate(query);
-        // Add the new book record to the list
-        this.data.add(user);
     }
 
     /**
