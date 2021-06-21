@@ -13,7 +13,7 @@
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shippingsystem.auth.controllers.LoginController">
    <children>
-      <Button defaultButton="true" layoutX="171.0" layoutY="269.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="269.0" text="Login">
+      <Button fx:id="loginBtn" defaultButton="true" layoutX="171.0" layoutY="269.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="269.0" text="Login">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
@@ -22,7 +22,7 @@
             <Image url="@../../../assets/images/logo.png" />
          </image>
       </ImageView>
-      <TextField layoutX="259.0" layoutY="169.0" prefHeight="30.0" prefWidth="183.0">
+      <TextField fx:id="emailTf" layoutX="259.0" layoutY="169.0" prefHeight="30.0" prefWidth="183.0">
          <font>
             <Font size="14.0" />
          </font>
@@ -53,7 +53,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <PasswordField layoutX="259.0" layoutY="209.0" prefHeight="24.0" prefWidth="183.0">
+      <PasswordField fx:id="passwordTf" layoutX="259.0" layoutY="209.0" prefHeight="24.0" prefWidth="183.0">
          <font>
             <Font size="14.0" />
          </font>

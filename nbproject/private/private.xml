@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/auth/views/Login.fxml</file>
+            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/utils/BasicDB.java</file>
+            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/auth/controllers/LoginController.java</file>
+            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/utils/Helpers.java</file>
+            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/auth/controllers/FXMLController.java</file>
+            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/auth/views/Signup.fxml</file>
+            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/models/UserDAO.java</file>
+            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/auth/controllers/SignupController.java</file>
+            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/ShippingSystem.java</file>
+            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/models/UserModel.java</file>
+        </group>
+    </open-files>
+</project-private>
