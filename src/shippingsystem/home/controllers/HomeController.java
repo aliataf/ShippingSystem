@@ -12,11 +12,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import shippingsystem.home.models.OrderDAO;
 import shippingsystem.home.models.OrderModel;
+import shippingsystem.utils.Helpers;
 
 /**
  * FXML Controller class
@@ -28,6 +30,8 @@ public class HomeController implements Initializable {
     @FXML
     private TableView<OrderModel> ordersTable;
     private OrderDAO orderDAO = new OrderDAO();
+    @FXML
+    private Button addOrderBtn;
 
     /**
      * Initializes the controller class.
@@ -58,6 +62,13 @@ public class HomeController implements Initializable {
         ObservableList<OrderModel> list = FXCollections.observableArrayList(orders);
         ordersTable.setItems(list);
 
+        addHandlers();
+
     }
 
+    private void addHandlers() {
+        addOrderBtn.setOnAction(event -> {
+            Helpers.showScene(addOrderBtn, "/shippingsystem/home/views/AddOrder.fxml");
+        });
+    }
 }
