@@ -100,6 +100,7 @@ public class UserDAO {
             while (result.next()) {
                 UserModel temp = new UserModel();
                 // Form the BookModel object for each returned row
+                temp.setId(result.getInt(1));
                 temp.setEmail(result.getString(2)); // The first index of the columns is 1 not 0
                 temp.setPassword(result.getString(3));
                 temp.setName(result.getString(4));

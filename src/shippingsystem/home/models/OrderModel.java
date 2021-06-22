@@ -17,16 +17,18 @@ public class OrderModel {
     protected int totalPrice;
     protected String approxTime;
     protected String status;
+    private int userId;
 
     public OrderModel() {
     }
 
-    public OrderModel(int number, String shippingAddress, int totalPrice, String approxTime, String status) {
+    public OrderModel(int number, String shippingAddress, int totalPrice, String approxTime, String status, int userId) {
         this.number = number;
         this.shippingAddress = shippingAddress;
         this.totalPrice = totalPrice;
         this.approxTime = approxTime;
         this.status = status;
+        this.userId = userId;
     }
 
     public int getId() {
@@ -75,6 +77,14 @@ public class OrderModel {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
 }

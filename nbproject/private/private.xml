@@ -3,12 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/home/models/ItemModel.java</file>
+            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/home/views/Home.fxml</file>
+            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/home/models/ItemDAO.java</file>
+            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/home/controllers/AddOrderController.java</file>
+            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/home/controllers/HomeController.java</file>
+            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/home/views/AddOrder.fxml</file>
+            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/home/models/OrderItemModel.java</file>
+            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/models/UserModel.java</file>
+            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/home/models/OrderDAO.java</file>
             <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/auth/views/Login.fxml</file>
             <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/auth/controllers/LoginController.java</file>
             <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/utils/Helpers.java</file>
-            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/home/views/Home.fxml</file>
             <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/models/UserDAO.java</file>
-            <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/home/controllers/HomeController.java</file>
             <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/utils/DialogUtil.java</file>
             <file>file:/D:/Netbeans%20Projects/ShippingSystem/src/shippingsystem/home/models/OrderModel.java</file>
         </group>

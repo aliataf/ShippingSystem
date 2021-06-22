@@ -16,6 +16,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import shippingsystem.models.UserDAO;
 import shippingsystem.models.UserModel;
+import shippingsystem.utils.AppData;
 import shippingsystem.utils.DialogUtil;
 import shippingsystem.utils.Helpers;
 
@@ -54,6 +55,7 @@ public class LoginController implements Initializable {
                     if (um.getEmail().equals(email) && um.getPassword().equals(password)) {
                         DialogUtil.getInstance().show("Welcome " + um.getName(), email);
                         isExist = true;
+                        AppData.user = um;
                     }
                 }
                 if (isExist) {
