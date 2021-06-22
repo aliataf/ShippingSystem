@@ -38,7 +38,7 @@ public class UserDAO {
                 temp.setName(result.getString(2)); // The first index of the columns is 1 not 0
                 temp.setCategory(result.getString(3));
                 temp.setNumOfCopies(result.getInt(4));
-                */
+                 */
             } while (result.next());
             return true;
         } catch (SQLException e) {
@@ -97,9 +97,9 @@ public class UserDAO {
         // Execute the query
         ResultSet result = BasicDB.retrieve(query);
         // Copy the returned result set into the array list
-        UserModel temp = new UserModel();
         try {
             while (result.next()) {
+                UserModel temp = new UserModel();
                 // Form the BookModel object for each returned row
                 temp.setEmail(result.getString(2)); // The first index of the columns is 1 not 0
                 temp.setPassword(result.getString(3));
