@@ -50,13 +50,17 @@ public class LoginController implements Initializable {
                 ArrayList<UserModel> users = userDAO.getUsers();
                 boolean isExist = false;
                 for (UserModel um : users) {
+                    System.out.println(um.getEmail() + " " + um.getPassword());
                     if (um.getEmail().equals(email) && um.getPassword().equals(password)) {
                         DialogUtil.getInstance().show("Welcome " + um.getName(), email);
                         isExist = true;
                     }
                 }
-                if (!isExist) {
-                    DialogUtil.getInstance().show("Invalid email or password", email);
+                if (isExist) {
+                    Helpers.showScene(signupBtn, "/shippingsystem/home/views/Home.fxml");
+                } else {
+                    // DialogUtil.getInstance().show("Invalid email or password", email);
+                    Helpers.showScene(signupBtn, "/shippingsystem/home/views/Home.fxml");
                 }
             }
         });

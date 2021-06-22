@@ -10,12 +10,12 @@ package shippingsystem.models;
  * @author alilo
  */
 public class UserModel {
-    protected int id;
-    protected String email;
-    protected String password;
-    protected String name;
-    protected String phone;
-    protected String address;
+protected int id;
+protected String email;
+protected String password;
+protected String name;
+protected String phone;
+protected String address;
 
     public UserModel() {
     }
