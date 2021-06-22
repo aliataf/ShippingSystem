@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import shippingsystem.home.models.OrderDAO;
 import shippingsystem.home.models.OrderModel;
@@ -27,11 +28,16 @@ import shippingsystem.utils.Helpers;
  */
 public class HomeController implements Initializable {
 
+    ArrayList<OrderModel> orders = new ArrayList<>();
+    ArrayList<OrderModel> filteredOrders = new ArrayList<>();
+
     @FXML
     private TableView<OrderModel> ordersTable;
     private OrderDAO orderDAO = new OrderDAO();
     @FXML
     private Button addOrderBtn;
+    @FXML
+    private TextField searchTf;
 
     /**
      * Initializes the controller class.
@@ -58,7 +64,7 @@ public class HomeController implements Initializable {
 
         ordersTable.getColumns().addAll(column1, column2, column3, column4, column5, column6);
 
-        ArrayList<OrderModel> orders = orderDAO.getOrders();
+        orders = orderDAO.getOrders();
         ObservableList<OrderModel> list = FXCollections.observableArrayList(orders);
         ordersTable.setItems(list);
 
@@ -69,6 +75,17 @@ public class HomeController implements Initializable {
     private void addHandlers() {
         addOrderBtn.setOnAction(event -> {
             Helpers.showScene(addOrderBtn, "/shippingsystem/home/views/AddOrder.fxml");
+        });
+
+        searchTf.setOnKeyReleased(event -> {
+            filteredOrders.clear();
+            for (OrderModel om : orders) {
+                if (String.valueOf(om.getNumber()).contains(searchTf.getText().trim())) {
+                    filteredOrders.add(om);
+                }
+            }
+            ObservableList<OrderModel> list = FXCollections.observableArrayList(filteredOrders);
+            ordersTable.setItems(list);
         });
     }
 }

@@ -1,6 +1,5 @@
 package shippingsystem.home.models;
 
-import shippingsystem.models.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -13,38 +12,6 @@ import shippingsystem.utils.BasicDB;
  */
 public class OrderDAO {
 
-    public boolean retrieve(String category) {
-        //Build the SQL query
-        String query = "select * from books where category = '" + category + "'";
-        //Execute the query via the BasicDB methods
-        ResultSet result = BasicDB.retrieve(query);
-
-        try {
-            if (!result.next()) {
-                return false;
-            }
-            do {
-                //Copy the returned result set into the array list
-                OrderModel temp = new OrderModel();
-                //Form the BookModel object for each returned row
-                /*
-                temp.setName(result.getString(2)); // The first index of the columns is 1 not 0
-                temp.setCategory(result.getString(3));
-                temp.setNumOfCopies(result.getInt(4));
-                 */
-            } while (result.next());
-            return true;
-        } catch (SQLException e) {
-        }
-        return false;
-    }
-
-    /**
-     * Inserts a new record to the database based on the entered order data from
-     * the GUI.
-     *
-     * @param order
-     */
     public OrderModel add(OrderModel order, List<ItemModel> items) {
         OrderModel temp = null;
 
@@ -133,13 +100,5 @@ public class OrderDAO {
             System.out.println(e.getMessage());
         }
         return res;
-    }
-
-    public void addItem(ItemModel item) {
-        // Form the query
-        //String query = "insert into order_details values( '"
-        //        + order.getNumber() + "','" + order.getShippingAddress() + "','" + order.getTotalPrice() + "','" + order.getApproxTime() + "','" + order.getStatus() + "')";
-        // Execute the query
-        //int rows = BasicDB.manipulate(query);
     }
 }
