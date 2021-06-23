@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package shippingsystem.utils;
 
 import javafx.scene.control.Alert;
@@ -10,7 +5,7 @@ import javafx.scene.control.ButtonType;
 
 /**
  *
- * @author obadaJasm
+ * @author Ali Ataf + Lilas Meraii
  */
 public class DialogUtil {
 
@@ -18,7 +13,7 @@ public class DialogUtil {
 
     private DialogUtil() {
     }
-    
+
     public static DialogUtil getInstance() {
         if (instance == null) {
             instance = new DialogUtil();

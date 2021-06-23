@@ -1,21 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package shippingsystem.models;
 
 /**
  *
- * @author alilo
+ * @author Ali Ataf + Lilas Meraii
  */
 public class UserModel {
-protected int id;
-protected String email;
-protected String password;
-protected String name;
-protected String phone;
-protected String address;
+
+    protected int id;
+    protected String email;
+    protected String password;
+    protected String name;
+    protected String phone;
+    protected String address;
 
     public UserModel() {
     }
@@ -76,6 +72,4 @@ protected String address;
         this.address = address;
     }
 
-    
-    
 }

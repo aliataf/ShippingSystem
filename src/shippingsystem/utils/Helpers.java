@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package shippingsystem.utils;
 
 import javafx.fxml.FXMLLoader;
@@ -14,7 +9,7 @@ import shippingsystem.auth.controllers.LoginController;
 
 /**
  *
- * @author alilo
+ * @author Ali Ataf + Lilas Meraii
  */
 public class Helpers {
 
@@ -33,8 +28,7 @@ public class Helpers {
             System.out.println(e.getMessage());
         }
     }
-    
-    
+
     public static void showScene(Node node, String url) {
         showScene(node, url, "Shipping System");
     }

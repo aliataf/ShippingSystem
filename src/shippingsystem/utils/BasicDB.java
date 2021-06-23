@@ -8,9 +8,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- * Created Friday 4th,June,2021.
  *
- * @author Leen
+ * @author Ali Ataf + Lilas Meraii
  */
 public class BasicDB {
 

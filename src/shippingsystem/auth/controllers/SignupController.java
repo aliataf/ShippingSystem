@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package shippingsystem.auth.controllers;
 
 import java.net.URL;
@@ -20,9 +15,8 @@ import shippingsystem.utils.DialogUtil;
 import shippingsystem.utils.Helpers;
 
 /**
- * FXML Controller class
  *
- * @author alilo
+ * @author Ali Ataf + Lilas Meraii
  */
 public class SignupController implements Initializable {
 

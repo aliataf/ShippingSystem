@@ -46,31 +46,6 @@ public class OrderDAO {
     }
 
     /**
-     * Updates the number of copies of a certain book given its name.
-     *
-     * @param name
-     * @param newCopies
-     */
-    public void update(String name, int newCopies) {
-        //Form the query 
-        String query = "update books set copies = " + newCopies + " where name= '" + name + "'";
-        //Execute the query 
-        int rows = BasicDB.manipulate(query);
-    }
-
-    /**
-     * Deletes a record from the table based on the order id.
-     *
-     * @param id
-     */
-    public void delete(int id) {
-        // Form the delete query
-        String query = "delete from orders where id= " + id;
-        // Execute query
-        int rows = BasicDB.manipulate(query);
-    }
-
-    /**
      * Retrieves all the stored records in the "orders" table.
      *
      * @return

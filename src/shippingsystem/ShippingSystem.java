@@ -1,22 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package shippingsystem;
 
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import shippingsystem.utils.BasicDB;
 
 /**
  *
- * @author alilo
+ * @author Ali Ataf + Lilas Meraii
  */
 public class ShippingSystem extends Application {
 
@@ -36,7 +28,7 @@ public class ShippingSystem extends Application {
             System.out.println(e.getMessage());
         }
     }
-    
+
     /**
      * @param args the command line arguments
      */

@@ -12,73 +12,20 @@ import shippingsystem.utils.BasicDB;
  */
 public class ItemDAO {
 
-    public boolean retrieve(String category) {
-        //Build the SQL query
-        String query = "select * from books where category = '" + category + "'";
-        //Execute the query via the BasicDB methods
-        ResultSet result = BasicDB.retrieve(query);
-
-        try {
-            if (!result.next()) {
-                return false;
-            }
-            do {
-                //Copy the returned result set into the array list
-                OrderModel temp = new OrderModel();
-                //Form the BookModel object for each returned row
-                /*
-                temp.setName(result.getString(2)); // The first index of the columns is 1 not 0
-                temp.setCategory(result.getString(3));
-                temp.setNumOfCopies(result.getInt(4));
-                 */
-            } while (result.next());
-            return true;
-        } catch (SQLException e) {
-        }
-        return false;
-    }
-
     /**
-     * Inserts a new record to the database based on the entered order data from
-     * the GUI.
-     *
-     * @param order
-     */
-    public void add(OrderModel order) {
-        // Form the query
-        String query = "insert into orders (number, shipping_address, total_price, approx_time, status) values( '"
-                + order.getNumber() + "','" + order.getShippingAddress() + "','" + order.getTotalPrice() + "','" + order.getApproxTime() + "','" + order.getStatus() + "')";
-        // Execute the query
-        int rows = BasicDB.manipulate(query);
-    }
-
-    /**
-     * Updates the number of copies of a certain book given its name.
-     *
-     * @param name
-     * @param newCopies
-     */
-    public void update(String name, int newCopies) {
-        //Form the query 
-        String query = "update books set copies = " + newCopies + " where name= '" + name + "'";
-        //Execute the query 
-        int rows = BasicDB.manipulate(query);
-    }
-
-    /**
-     * Deletes a record from the table based on the order id.
+     * Deletes a record from the table based on the item id.
      *
      * @param id
      */
     public void delete(int id) {
         // Form the delete query
-        String query = "delete from orders where id= " + id;
+        String query = "delete from item where id= " + id;
         // Execute query
         int rows = BasicDB.manipulate(query);
     }
 
     /**
-     * Retrieves all the stored records in the "orders" table.
+     * Retrieves all the stored records in the "items" table.
      *
      * @return
      */
@@ -107,4 +54,5 @@ public class ItemDAO {
         }
         return res;
     }
+
 }
