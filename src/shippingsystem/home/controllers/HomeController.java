@@ -63,8 +63,7 @@ public class HomeController implements Initializable {
         actionCol.setCellValueFactory(new PropertyValueFactory<>("DUMMY"));
 
         Callback<TableColumn<OrderModel, String>, TableCell<OrderModel, String>> cellFactory
-                = //
-                new Callback<TableColumn<OrderModel, String>, TableCell<OrderModel, String>>() {
+                = new Callback<TableColumn<OrderModel, String>, TableCell<OrderModel, String>>() {
             @Override
             public TableCell call(final TableColumn<OrderModel, String> param) {
                 final TableCell<OrderModel, String> cell = new TableCell<OrderModel, String>() {

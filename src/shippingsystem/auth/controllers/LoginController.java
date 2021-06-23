@@ -55,8 +55,7 @@ public class LoginController implements Initializable {
                 if (isExist) {
                     Helpers.showScene(signupBtn, "/shippingsystem/home/views/Home.fxml");
                 } else {
-                    // DialogUtil.getInstance().show("Invalid email or password", email);
-                    Helpers.showScene(signupBtn, "/shippingsystem/home/views/Home.fxml");
+                    DialogUtil.getInstance().show("Invalid email or password", email);
                 }
             }
         });
