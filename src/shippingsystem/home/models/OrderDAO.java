@@ -46,14 +46,15 @@ public class OrderDAO {
     }
 
     /**
-     * Retrieves all the stored records in the "orders" table.
+     * Retrieves all the stored records in the "orders" table related to
+     * specific user id.
      *
      * @return
      */
-    public ArrayList<OrderModel> getOrders() {
+    public ArrayList<OrderModel> getOrders(int userId) {
         ArrayList<OrderModel> res = new ArrayList<>();
         // Form the Select * query
-        String query = "Select * from orders";
+        String query = "Select * from orders where user_id = " + userId;
         // Execute the query
         ResultSet result = BasicDB.retrieve(query);
         // Copy the returned result set into the array list
@@ -61,7 +62,7 @@ public class OrderDAO {
             while (result.next()) {
                 OrderModel temp = new OrderModel();
                 // Form the OrderModel object for each returned row
-                temp.setId(result.getInt(1)); // The first index of the columns is 1 not 0
+                temp.setId(result.getInt(1));
                 temp.setNumber(result.getInt(2));
                 temp.setShippingAddress(result.getString(3));
                 temp.setTotalPrice(result.getInt(4));

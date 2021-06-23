@@ -96,7 +96,7 @@ public class HomeController implements Initializable {
 
         ordersTable.getColumns().addAll(column1, column2, column3, column4, column5, column6, actionCol);
 
-        orders = orderDAO.getOrders();
+        orders = orderDAO.getOrders(AppData.user.getId());
         ObservableList<OrderModel> list = FXCollections.observableArrayList(orders);
         ordersTable.setItems(list);
 
