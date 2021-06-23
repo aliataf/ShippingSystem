@@ -75,6 +75,10 @@ public class AddOrderController implements Initializable {
 
         ArrayList<ItemModel> items = itemDAO.getItems();
         itemCb.setItems(FXCollections.observableArrayList(items));
+        
+        System.out.println("address: " + AppData.user.getAddress());
+        addressTf.setText(AppData.user.getAddress());
+        
         addHandlers();
     }
 

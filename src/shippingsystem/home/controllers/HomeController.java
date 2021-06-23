@@ -8,12 +8,15 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.util.Callback;
 import shippingsystem.home.models.OrderDAO;
 import shippingsystem.home.models.OrderModel;
+import shippingsystem.utils.AppData;
 import shippingsystem.utils.Helpers;
 
 /**
@@ -56,7 +59,42 @@ public class HomeController implements Initializable {
         TableColumn column6 = new TableColumn("Order Status");
         column6.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        ordersTable.getColumns().addAll(column1, column2, column3, column4, column5, column6);
+        TableColumn actionCol = new TableColumn("Action");
+        actionCol.setCellValueFactory(new PropertyValueFactory<>("DUMMY"));
+
+        Callback<TableColumn<OrderModel, String>, TableCell<OrderModel, String>> cellFactory
+                = //
+                new Callback<TableColumn<OrderModel, String>, TableCell<OrderModel, String>>() {
+            @Override
+            public TableCell call(final TableColumn<OrderModel, String> param) {
+                final TableCell<OrderModel, String> cell = new TableCell<OrderModel, String>() {
+
+                    final Button btn = new Button("View");
+
+                    @Override
+                    public void updateItem(String item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if (empty) {
+                            setGraphic(null);
+                            setText(null);
+                        } else {
+                            btn.setOnAction(event -> {
+                                OrderModel order = getTableView().getItems().get(getIndex());
+                                AppData.selectedOrder = order;
+                                Helpers.showScene(btn, "/shippingsystem/home/views/ViewOrder.fxml");
+                            });
+                            setGraphic(btn);
+                            setText(null);
+                        }
+                    }
+                };
+                return cell;
+            }
+        };
+
+        actionCol.setCellFactory(cellFactory);
+
+        ordersTable.getColumns().addAll(column1, column2, column3, column4, column5, column6, actionCol);
 
         orders = orderDAO.getOrders();
         ObservableList<OrderModel> list = FXCollections.observableArrayList(orders);
