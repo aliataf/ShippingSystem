@@ -121,7 +121,7 @@ public class AddOrderController implements Initializable {
                     c *= 10;
                 }
 
-                String approxTime = (rand.nextInt(5) + 1) + " days";
+                String approxTime = (rand.nextInt(5) + 2) + " days";
 
                 OrderModel order = new OrderModel(number, address, totalPrice, approxTime, "Processing", AppData.user.getId());
                 orderDAO.add(order, items);
